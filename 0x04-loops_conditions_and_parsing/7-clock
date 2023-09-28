@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#prints hours and then minutes
+
+x=0
+h=0
+m=0
+while [ $x -le 779 ]
+do
+    if(( x % 60 == 0 ))
+    then
+      echo "Hour: $h"
+      m=0
+      ((h++))
+    else
+      echo "$m"
+    fi
+    ((x++))
+    ((m++))
+done
